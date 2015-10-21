@@ -3,6 +3,7 @@ $(document).ready(function() {
 
         $('#dataTable').DataTable({
             "info": false,
+            "searching": false,
             "language": {
                 "decimal":        "",
                 "emptyTable":     "无有效记录",
