@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Dashboard | Dashboard</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="">
+    <link rel="apple-touch-icon" href="images/icons/favicon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/icons/favicon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/icons/favicon-114x114.png">
+    <!--Loading bootstrap css-->
+
+    <link type="text/css" rel="stylesheet" href="styles/jquery-ui-1.10.4.custom.min.css">
+    <link type="text/css" rel="stylesheet" href="styles/font-awesome.min.css">
+    <link type="text/css" rel="stylesheet" href="styles/bootstrap.min.css">
+    <link type="text/css" rel="stylesheet" href="styles/animate.css">
+    <link type="text/css" rel="stylesheet" href="styles/all.css">
+    <link type="text/css" rel="stylesheet" href="styles/main.css">
+    <link type="text/css" rel="stylesheet" href="styles/style-responsive.css">
+    <link type="text/css" rel="stylesheet" href="styles/zabuto_calendar.min.css">
+    <link type="text/css" rel="stylesheet" href="styles/pace.css">
+    <style type="text/css">
+        .editTable{
+            display: none;
+        }
+    </style>
+
+</head>
+<body>
+   <!--BEGIN TITLE & BREADCRUMB PAGE-->
+                <div id="title-breadcrumb-option-demo" class="page-title-breadcrumb">
+                    <div class="page-header pull-left">
+                        <div class="page-title">
+                            用户管理</div>
+                    </div>
+                    <ol class="breadcrumb page-breadcrumb pull-right">
+                        <li><i class="fa fa-home"></i>&nbsp;<a href="index.html">主页</a></li>&nbsp;<i class="fa fa-angle-right"></i>&nbsp;</li>
+                        <li><a href="#"> 设置</a>&nbsp;<i class="fa fa-angle-right"></i>&nbsp;</li>
+                        <li class="active"><a href="#">用户管理</a></li>
+                    </ol>
+                    <div class="clearfix">
+                    </div>
+                </div>
+                <!--END TITLE & BREADCRUMB PAGE-->
+                <!--BEGIN CONTENT-->
+                <div class="page-content">
+                    <div id="tab-general">
+                        <div class="row mbl">
+                            <div class="col-lg-12">
+                                
+                                            <div class="col-md-12">
+                                                <div id="area-chart-spline" style="width: 100%; height: 300px; display: none;">
+                                                </div>
+                                            </div>
+                                
+                            </div>
+
+                            <div class="col-lg-12">
+                              
+                                    
+                              <div class="row">
+                    <div class="col-md-12">
+
+                        <div class="row mtl">
+
+                            <div class="col-md-12">
+                                <ul class="nav nav-tabs">
+                                    <li class="active"><a href="#tab-edit" data-toggle="tab" aria-expanded="true">所有用户</a></li>
+                                    <li class=""><a href="#tab-messages" data-toggle="tab" aria-expanded="false">新增用户</a></li>
+                                </ul>
+                                <div id="generalTabContent" class="tab-content">
+                                    <div id="tab-edit" class="tab-pane fade active in">
+                                        <div class="panel">
+                            <div class="panel-body">
+                                <form >
+                                <table class="table table-hover" >
+                                 <thead>
+                                    <tr>
+                                     <th>编号</th>
+                                        <th>用户名</th>
+                                        <th>用户组</th>
+                                        <th>注册时间</th>
+                                        <th>状态</th>
+                                        <th>操作</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td class="edit"  >
+                                        <label>Henry</label>
+                                        <a class="fa fa-pencil-square-o" style="display:none;"></a>
+                                        <div class="editTable">
+                                            <input type="text" name="username" value="">
+                                            <a class="fa fa-check"></a>
+                                            <a class="fa fa-times"></a>
+                                        </div>
+                                        
+                                    </td>
+                                    <td class="edit" >
+                                        管理员
+                                            <a class="fa fa-pencil-square-o" style="display:none;"></a>
+                                            <div class="editTable">
+                                                <select name="usergroup">
+                                                    <option value="">管理员</option>
+                                                    <option value="">普通用户</option>
+                                                    <option value="">高级用户</option>
+                                                </select>
+                                                <a class="fa fa-check"></a>
+                                                <a class="fa fa-times"></a>
+                                            </div>
+                                    </td>
+                                    <td>2015-10-15</td>
+                                    <td class="edit" ><span class="label label-sm label-success">Approved</span></td>
+                                    <td>
+                                        <a class="fa fa-pencil-square-o" href=""></a>&nbsp<a class="fa fa-trash-o" href=""></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td class="edit" >
+                                        John
+                                        <a class="fa fa-pencil-square-o" style="display:none;"></a>
+                                        <div class="editTable">
+                                            <input type="text" name="username" value="">
+                                            <a class="fa fa-check"></a>
+                                            <a class="fa fa-times"></a>
+                                        </div>
+                                    </td>
+                                    <td class="edit" >管理员</td>
+                                    <td>2015-10-14</td>
+                                    <td class="edit" ><span class="label label-sm label-info">Pending</span></td>
+                                    <td>
+                                        <a class="fa fa-pencil-square-o" href=""></a>&nbsp<a class="fa fa-trash-o" href=""></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td class="edit" >Larry</td>
+                                    <td class="edit" >管理员</td>
+                                    <td>2015-10-13</td>
+                                    <td class="edit" ><span class="label label-sm label-warning">Suspended</span></td>
+                                    <td>
+                                        <a class="fa fa-pencil-square-o" href=""></a>&nbsp<a class="fa fa-trash-o" href=""></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td class="edit" >Lahm</td>
+                                    <td class="edit" >管理员</td>
+                                    <td>2015-10-12</td>
+                                    <td class="edit" ><span class="label label-sm label-danger">Blocked</span></td>
+                                    <td>
+                                        <a class="fa fa-pencil-square-o" href=""></a>&nbsp<a class="fa fa-trash-o" href=""></a>
+                                    </td>
+                                </tr>
+                                </tbody>
+                                </form>
+                            </table>
+                            </div>
+                    </div>
+                                    </div>
+                                    <div id="tab-messages" class="tab-pane fade">
+                                        <form action="#" class="form-horizontal">
+
+                                            <div class="form-group"><label class="col-sm-3 control-label">邮箱：</label>
+
+                                                <div class="col-sm-9 controls">
+                                                    <div class="row">
+                                                        <div class="col-xs-9"><input type="email" placeholder="email@yourcompany.com" class="form-control"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group"><label class="col-sm-3 control-label">用户名：</label>
+
+                                                <div class="col-sm-9 controls">
+                                                    <div class="row">
+                                                        <div class="col-xs-9"><input type="text" placeholder="用户名" class="form-control"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group"><label class="col-sm-3 control-label">用户组：</label>
+
+                                                <div class="col-sm-9 controls">
+                                                    <div class="row">
+                                                        <div class="col-xs-9">
+                                                            <select name="userGroup" class="form-control">
+                                                                <option value="">管理员</option>
+                                                                <option value="">普通用户</option>
+                                                                <option value="">高级用户</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group"><label class="col-sm-3 control-label">密码：</label>
+
+                                                <div class="col-sm-9 controls">
+                                                    <div class="row">
+                                                        <div class="col-xs-9"><input type="password" placeholder="密码" class="form-control"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group"><label class="col-sm-3 control-label">确认密码：</label>
+
+                                                <div class="col-sm-9 controls">
+                                                    <div class="row">
+                                                        <div class="col-xs-9"><input type="password" placeholder="确认密码" class="form-control"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <hr>
+                                            <button type="submit" class="btn btn-green " style="position:relative; left:45%; width:100px;">创建</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                              
+                                </div>
+                                
+                            
+                     
+                            
+                        </div>
+                        
+                    </div>
+                </div>
+                <!--END CONTENT-->
+</body>
+    <script src="script/jquery-1.10.2.min.js"></script>
+    <script src="script/jquery-migrate-1.2.1.min.js"></script>
+    <script src="script/jquery-ui.js"></script>
+    <script src="script/bootstrap.min.js"></script>
+    <script src="script/bootstrap-hover-dropdown.js"></script>
+    <script src="script/html5shiv.js"></script>
+    <script src="script/respond.min.js"></script>
+    <script src="script/jquery.metisMenu.js"></script>
+    <script src="script/jquery.slimscroll.js"></script>
+    <script src="script/jquery.cookie.js"></script>
+    <script src="script/icheck.min.js"></script>
+    <script src="script/custom.min.js"></script>
+
+    <script src="script/jquery.menu.js"></script>
+    <script src="script/pace.min.js"></script>
+    <script src="script/holder.js"></script>
+    <script src="script/responsive-tabs.js"></script>
+    <script src="script/jquery.flot.js"></script>
+    <script src="script/jquery.flot.categories.js"></script>
+    <script src="script/jquery.flot.pie.js"></script>
+    <script src="script/jquery.flot.tooltip.js"></script>
+
+    <script src="script/jquery.flot.fillbetween.js"></script>
+    <script src="script/jquery.flot.stack.js"></script>
+    <script src="script/jquery.flot.spline.js"></script>
+    <script src="script/zabuto_calendar.min.js"></script>
+    <script src="script/index.js"></script>
+ 
+
+
+    <!--CORE JAVASCRIPT-->
+    <script src="script/main.js"></script>
+    <script src="script/jquery.metisMenu.js"></script>
+    <script type="text/javascript">
+    // function showEdit(){
+    //     var td = event.srcElement;
+    //     td.childNodes[1].style.display="inline-block";
+    // }
+    // function hideEdit(){
+    //     var td = event.srcElement;
+    //     td.childNodes[1].style.display="none";
+    // }
+    // function showInput(){
+    //     $(this).parent('td').children('form').css("display","block");
+    // }
+    // function hideInput(){
+    //     $(this).parent('td').children('form').css("display","none");
+    // }
+    $(document).ready(function(){
+        $("td.edit").mouseover(function(){
+            $(this).children('a').css("display","inline-block");
+        });
+        $("td.edit").mouseout(function(){
+            $(this).children('a').css("display","none");
+        });
+        $("td.edit").children('a').click(function(){
+            var text = $(this).prev().text();
+            console.log(text);
+            $(this).next('.editTable').children('input').val(text);
+            $(this).next('.editTable').css("display","block");
+            $(this).next('.editTable').children('.fa-times').click(function(){
+                $(this).parent().css("display","none");
+            });
+        });
+    });
+
+    </script>
+</html>
