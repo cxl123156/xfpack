@@ -24,6 +24,11 @@
     <link type="text/css" rel="stylesheet" href="styles/pace.css">
     <!--<link type="text/css" rel="stylesheet" href="styles/jquery.dataTables.min.css">-->
     <link type="text/css" rel="stylesheet" href="styles/dataTables.bootstrap.min.css">
+    <style type="text/css">
+    .filter{
+        text-align: right;
+    }
+    </style>
 </head>
 <body>
 
@@ -189,9 +194,24 @@
                     "sortAscending":  ": activate to sort column ascending",
                     "sortDescending": ": activate to sort column descending"
                 }
-            }
+            },
+            initComplete: function () {
+            this.api().columns().every( function () {
+                var column = this;
+                        $('div.filter').html('<label>查找状态：<select id="col3_filter" data-column="3" type="text" class="idSelect form-control" value=""><option>Approved</option><option>Pending</option><option>Suspended</option><option>Blocked</option></select></label>');
+                    $('select.idSelect').on( 'change', function () {
+                        var val = $.fn.dataTable.util.escapeRegex(
+                            $(this).val()
+                        );
+ 
+                        column
+                            .search( val ? '^'+val+'$' : '', true, false )
+                            .draw();
+                    } );
+            } );
+        }
         });
-        $('div.filter').html('<label>查找单号：<select id="col3_filter" data-column="3" type="text" class="form-control column_filter" value=""><option>Approved</option><option>Pending</option><option>Suspended</option><option>Blocked</option></select></label>');
+
         $('input.column_filter').on( 'keyup click selected', function () {
         filterColumn( $(this).attr('data-column'));
         } );
